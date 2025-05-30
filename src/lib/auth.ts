@@ -9,8 +9,8 @@ import { usersToClinicsTable } from "@/db/schema";
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
-    provider: "pg", // or "pg" or "mysql"
-    usePlural: true, // Use plural table names
+    provider: "pg",
+    usePlural: true,
     schema,
   }),
   socialProviders: {
@@ -27,16 +27,19 @@ export const auth = betterAuth({
           clinic: true,
         },
       });
-      const clinic = clinics[0];
+      // TODO: Ao adaptar para o usuário ter múltiplas clínicas, deve-se mudar esse código
+      const clinic = clinics?.[0];
       return {
         user: {
           ...user,
-          clinic: {
-            id: clinic.clinicId,
-            name: clinic.clinic.name,
-          },
-          session,
+          clinic: clinic?.clinicId
+            ? {
+                id: clinic?.clinicId,
+                name: clinic?.clinic?.name,
+              }
+            : undefined,
         },
+        session,
       };
     }),
   ],
