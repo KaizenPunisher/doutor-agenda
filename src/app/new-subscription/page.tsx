@@ -1,3 +1,5 @@
+{
+  /*
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -50,3 +52,15 @@ export default async function Home() {
     </div>
   );
 }
+*/
+}
+
+const Home = async () => {
+  return (
+    <div className="flex h-screen w-screen items-center justify-center">
+      New subscription
+    </div>
+  );
+};
+
+export default Home;
