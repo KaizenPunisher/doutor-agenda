@@ -4,7 +4,7 @@ import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import z from "zod";
+import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -77,7 +77,7 @@ const SignUpForm = () => {
           <CardHeader>
             <CardTitle>Criar Conta</CardTitle>
             <CardDescription>
-              Change your password here. After saving, you'll be logged out.
+              Change your password here. After saving, you ll be logged out.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
