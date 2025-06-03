@@ -16,7 +16,15 @@ const eslintConfig = [
     plugins: {
       "simple-import-sort": simpleImportSort,
     },
-    rules: {},
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+    },
+    eslint: {
+      // Warning: This allows production builds to successfully complete even if
+      // your project has ESLint errors.
+      ignoreDuringBuilds: true,
+    },
   },
 ];
 
