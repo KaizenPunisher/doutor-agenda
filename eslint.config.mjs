@@ -19,7 +19,6 @@ const eslintConfig = [
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
-      'import { ChevronLeft, ChevronRight } from "lucide-react";': "off",
     },
   },
 ];
