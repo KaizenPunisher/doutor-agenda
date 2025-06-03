@@ -47,3 +47,9 @@ const SubscriptionPage = async () => {
 export default SubscriptionPage;
 */
 }
+
+const SubscriptionPage = async () => {
+  return <h1>TESTE</h1>;
+};
+
+export default SubscriptionPage;
